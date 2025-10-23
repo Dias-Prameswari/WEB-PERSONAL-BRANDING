@@ -105,7 +105,7 @@ Proyek web **personal branding** untuk CEO PT Taggallery Agency. Aplikasi dibang
 
 ## Instalasi Lokal (Quickstart)
 - git clone https://github.com/Dias-Prameswari/WEB-PERSONAL-BRANDING.git
-cd WEB-PERSONAL-BRANDING
+- cd WEB-PERSONAL-BRANDING
 
 - composer install
 - cp .env.example .env
