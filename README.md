@@ -64,3 +64,59 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+# Website Personal Branding – CEO PT Taggallery Agency (Mitra DISKOMINFO)
+
+Proyek web **personal branding** untuk CEO PT Taggallery Agency. Aplikasi dibangun dengan **Laravel** dan menyertakan halaman profil, layanan, portofolio, blog/artikel, dan formulir kontak yang dilindungi **Cloudflare Turnstile**.
+
+> **Status:** v1.0.0 (First Delivery) – lihat **Releases** untuk catatan rilis & tautan dokumen lain.
+
+---
+
+## 🧱 Tech Stack
+- PHP 8.2+, **Laravel** 10/11
+- MySQL/MariaDB
+- Node.js 18+, npm (Vite)
+- Blade Templates, Tailwind/Bootstrap (sesuai di source)
+- Cloudflare Turnstile (captcha)
+
+---
+
+## ✨ Fitur Utama
+- Landing page personal + section About/Services/Testimonial.
+- Portofolio/Blog (list & detail).
+- Form Kontak/Lead dengan verifikasi Turnstile.
+- Admin dasar: autentikasi, role admin, halaman kelola lead.
+- SEO dasar (meta/OG), asset teroptimasi via Vite.
+
+---
+
+## 📂 Struktur Direktori (ringkas)
+- app/ # Controller, Model, Middleware
+- resources/views # Blade templates
+- routes/ # web.php, api.php
+- database/ # migrations & seeders
+- public/ # aset build & image statis
+
+## Prasyarat
+- PHP 8.2+, **Composer**
+- MySQL/MariaDB
+- Node 18+, npm
+
+## Instalasi Lokal (Quickstart)
+- git clone https://github.com/Dias-Prameswari/WEB-PERSONAL-BRANDING.git
+cd WEB-PERSONAL-BRANDING
+
+- composer install
+- cp .env.example .env
+- php artisan key:generate
+
+# konfigurasi DB di .env lalu:
+- php artisan migrate --seed
+  
+- npm install
+- npm run dev       # atau: npm run build  (untuk produksi)
+  
+- php artisan storage:link
+  
+- php artisan serve  # http://localhost:8000
