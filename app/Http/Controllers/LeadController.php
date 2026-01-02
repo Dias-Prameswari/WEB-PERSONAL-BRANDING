@@ -89,7 +89,7 @@ class LeadController extends Controller
             'name'    => ['required','string','min:3','max:120'],
             'email'   => ['required','email','max:255'],
             'phone'   => ['nullable','string','max:40'],
-            'program' => ['nullable','string','in:Newsletter,Pelatihan Branding,Konsultasi 1:1','max:100'],
+            'program' => ['nullable','string','in:Newsletter,Pelatihan Branding,Konsultasi 1:1,Lainnya','max:100'],
             'message' => ['nullable','string','max:2000'],
             'website' => ['present','size:0'], // honeypot
             'cf-turnstile-response' => ['nullable','string'], // biar aman kalau belum aktif

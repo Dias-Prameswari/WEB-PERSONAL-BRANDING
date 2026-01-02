@@ -4,11 +4,9 @@
 
   @section('main_class','pt-2 md:pt-3 pb-10')
 
- 
-    <h2 class="mt-[64px] md:mt-[100px] mb-2 font-display text-2xl md:text-3xl text-white text-center">
-      Leads
-    </h2>
-  
+  <h2 class="mt-[64px] md:mt-[100px] mb-2 font-display text-2xl md:text-3xl text-white text-center">
+    Leads
+  </h2>
 
   <div class="py-12">
     <div class="container-lg">
@@ -19,11 +17,10 @@
               type="text" name="q" value="{{ $q }}"
               placeholder="Cari nama/email/phone..."
               class="w-full rounded-xl border border-gray-200 px-4 py-2
-                     focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            >
+                     focus:outline-none focus:ring-2 focus:ring-emerald-500">
           </form>
 
-          <a href="{{ route('leads.export') }}" class="btn-primary whitespace-nowrap">
+          <a href="{{ route('leads.admin.export') }}" class="btn-primary whitespace-nowrap">
             Export CSV
           </a>
         </div>
@@ -42,18 +39,18 @@
             </thead>
             <tbody>
               @forelse ($leads as $i => $l)
-                <tr class="border-t hover:bg-gray-50/70">
-                  <td class="px-3 py-2">{{ $leads->firstItem() + $i }}</td>
-                  <td class="px-3 py-2">{{ $l->name }}</td>
-                  <td class="px-3 py-2">{{ $l->email }}</td>
-                  <td class="px-3 py-2">{{ $l->phone }}</td>
-                  <td class="px-3 py-2">{{ $l->program }}</td>
-                  <td class="px-3 py-2">{{ $l->created_at?->format('d M Y H:i') }}</td>
-                </tr>
+              <tr class="border-t hover:bg-gray-50/70">
+                <td class="px-3 py-2">{{ $leads->firstItem() + $i }}</td>
+                <td class="px-3 py-2">{{ $l->name }}</td>
+                <td class="px-3 py-2">{{ $l->email }}</td>
+                <td class="px-3 py-2">{{ $l->phone }}</td>
+                <td class="px-3 py-2">{{ $l->program }}</td>
+                <td class="px-3 py-2">{{ $l->created_at?->format('d M Y H:i') }}</td>
+              </tr>
               @empty
-                <tr>
-                  <td class="p-4 text-center text-gray-500" colspan="6">Belum ada data</td>
-                </tr>
+              <tr>
+                <td class="p-4 text-center text-gray-500" colspan="6">Belum ada data</td>
+              </tr>
               @endforelse
             </tbody>
           </table>

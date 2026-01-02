@@ -2,8 +2,10 @@
 
 return [
     'emails' => [
-        'admin1.triawanda@email.com', // ganti sesuai email yg diinginkan!
-        '',
-        // yg bisa akses website personal adalah 3 admin. jika lebih dari 3 admin akan ditolak!!
+        'admin1.triawanda@email.com',
+        'najmaaura27@gmail.com',
+        // tambahkan email terakhir untuk bisa jadi admin
     ],
 ];
+
+?>
